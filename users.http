@@ -1,0 +1,37 @@
+### Crear un nuevo usuario
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellidos": "Pérez",
+  "telefono": "1234567890",
+  "direccion": "Calle Falsa 123",
+  "correo": "juan.perez@example.com",
+  "contrasena": "miSecreta123",
+  "confirmarContrasena": "miSecreta123"
+}
+
+### Iniciar sesión de usuario
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "correo": "juan.perez@example.com",
+  "contrasena": "miSecreta123"
+}
+
+### Obtener un usuario por ID
+GET http://localhost:3000/api/users/{{id_del_usuario}}
+
+### Actualizar un usuario por ID
+PUT http://localhost:3000/api/users/{{id_del_usuario}}
+Content-Type: application/json
+
+{
+  "telefono": "0987654321",
+  "direccion": "Calle Actualizada 456"
+}
+
+### Eliminar un usuario por ID
+DELETE http://localhost:3000/api/users/{{id_del_usuario}}
